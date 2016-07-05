@@ -7,9 +7,9 @@
  globalBlocks = vips.getVisualBlockList(); //the list that contains your data, each item is a data element
 
  alert("HARD CODED DEMO, ONLY WORKS ON https://www.youtube.com/watch?v=yRYFKcMa_Ek (Maneater by Hall and Oates)");
+ console.log("Activated Video Info Selection!");
 
  ids = [];
- ids2 = [];
 
  //leftcolumn: starting "1-6-1"; ending "1-27-1";
  s = 6;
