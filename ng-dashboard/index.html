@@ -14,13 +14,14 @@
 
 <body ng-init="init()">
 	<div style="font-size:300%;"> Web Data View </div>
-	
+
 	<div id="main_menu">
     <label for="CAT_Custom_255276">Mode: <span class="req">*</span></label>
     <select class="cat_dropdown" id="drop_down_selection" name="drop_down_selection">
         <option value="0">-- Please select --</option>
         <option value="1">DOM Selection</option>
         <option value="2">VIPS Selection</option>
+				<option value="3">Video Streaming Site</option>
     </select>
 	</div>
 	<div id="dom_selection" style="display: none;">
@@ -35,7 +36,7 @@
 			</a>
 		</div>
 	</div>
-	<div id="vips_selection" style="display: none;"">
+	<div id="vips_selection" style="display: none;">
 	    <div ng-controller="tagClassChooseCtrl">
 			<a ng-click="vipsHighlightAll()"
 				class='btn btn-small btn-default'>
@@ -59,12 +60,24 @@
 			</a>
 		</div>
 	</div>
-	
+	<div id="video_selection" style="display: none;">
+		<div ng-controller="vidSelectionCtrl">
+			<a ng-click="activateVidSelectionHARDCODE()"
+				class='btn btn-small btn-default'>
+				Activate Video Info Selector
+			</a>
+			<a ng-click="deactivateVidSelectionHARDCODE()"
+				class='btn btn-small btn-default'>
+				Deactivate Video Info Selector
+			</a>
+		</div>
+	</div>
+
 	<script type="text/javascript" src="app/main.js"></script>
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="app/controller/domSelectionCtrl.js"></script>
-	<script type="text/javascript"
-		src="app/controller/vipsCtrl.js"></script>
+	<script type="text/javascript" src="app/controller/vipsCtrl.js"></script>
+	<script type="text/javascript" src="app/controller/vidSelectionCtrl.js"></script>
 	<script type="text/javascript" src="app/todoStorage.js"></script>
 	<script type="text/javascript" src="app/background.js"></script>
 </body>
